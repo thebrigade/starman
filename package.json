@@ -1,0 +1,33 @@
+{
+  "name": "starman",
+  "version": "0.0.0",
+  "description": "A simple utility to build static websites using coffeecup templates, coffeescript, and scss.",
+  "main": "lib/cli.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thebrigade/starman.git"
+  },
+  "keywords": [
+    "coffeekup",
+    "coffeecup",
+    "coffeescript",
+    "static",
+    "middleman"
+  ],
+  "dependencies": {
+      "coffee-script" : "1.4.0",
+      "coffeecup":"0.3.18",
+      "commander" : "1.1.1",
+      "connect":"2.7.0",
+      "underscore":"1.4.2",
+      "walk":"2.2.1",
+      "node-fs":"0.1.5",
+      "colors":"0.6.0-1"
+  },
+  "author": "Chris Jones <chris@thebriga.de>",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
