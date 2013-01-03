@@ -60,6 +60,8 @@ program
     # custom help
   ).action((options) ->
     port = options.port or 8080
+
+    starman.build()
     starman.watch()
     starman.serve port
     await setTimeout defer(), 1000
