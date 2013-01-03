@@ -7,7 +7,7 @@
     "test": ""
   },
   "bin": {
-    "starman": "./bin/coffin"
+    "starman": "./bin/starman"
   },
   "repository": {
     "type": "git",
