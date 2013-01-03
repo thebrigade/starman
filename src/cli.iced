@@ -1,13 +1,10 @@
 program = require 'commander'
-colors = require 'colors'
+colors  = require 'colors'
 starman = require './index'
-
-todoString = 'todo: '.blue
-star = '\u2606'.red
+star    = '\u2606'.red
 
 program
   .version('0.0.1')
-  .option('-v, --verbose', 'be chatty.')
 
 program
   .command('init')
@@ -65,6 +62,7 @@ program
     starman.build()
     starman.watch()
     starman.serve port
+    await setTimeout defer(), 1000
     starman.open port unless options.dontOpen
   )
 
