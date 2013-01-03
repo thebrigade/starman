@@ -6,6 +6,9 @@
   "scripts": {
     "test": ""
   },
+  "bin": {
+    "starman": "./bin/coffin"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/thebrigade/starman.git"
