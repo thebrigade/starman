@@ -33,6 +33,7 @@ program
   .command('watch')
   .description('Keep watching for changes and then compile everything into the release directory. (Blocks)')
   .action((options) ->
+    starman.build()
     starman.watch()
   )
 
@@ -61,7 +62,6 @@ program
   ).action((options) ->
     port = options.port or 8080
 
-    starman.build()
     starman.watch()
     starman.serve port
     await setTimeout defer(), 1000
