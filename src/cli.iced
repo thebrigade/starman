@@ -1,6 +1,6 @@
 program = require 'commander'
 colors = require 'colors'
-starman = require './starman'
+starman = require './index'
 
 todoString = 'todo: '.blue
 star = '\u2606'.red
