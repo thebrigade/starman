@@ -2,9 +2,11 @@ program = require 'commander'
 colors  = require 'colors'
 starman = require './index'
 star    = '\u2606'.red
-
+path    = require 'path'
+fs      = require 'fs'
+pjson   = require path.join(path.dirname(fs.realpathSync(__filename)), '../package.json')
 program
-  .version('0.0.1')
+  .version pjson.version
 
 program
   .command('init')
@@ -58,8 +60,6 @@ program
     # custom help
   ).action((options) ->
     port = options.port or 8080
-
-    starman.build()
     starman.watch()
     starman.serve port
     await setTimeout defer(), 1000

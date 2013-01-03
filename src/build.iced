@@ -10,17 +10,25 @@ _       = require 'underscore'
 
 [compilePages] = [null]
 
+handleProcessOutput = (command, err, stdout, stderr) ->
+  console.log stdout if stdout?
+  console.error stderr if stderr?
+  if err?
+    console.error "the #{command} command exited with an error, check the output above for more details"
+
 module.exports = (callback) ->
   try
     await exec 'rm -rf release/', defer()
     fsextra.mkdirRecursiveSync 'release'
     await
       fsextra.copyRecursive './static', './release', defer copyErr
-      exec 'sass --scss -t expanded --update -f scss:release/css', defer sassErr
-      exec 'coffee -c -o release/lib/ src/', defer(csErr, stdout, stderr)
-      compilePages defer pagesErr
-    if copyErr or sassErr or csErr or pagesErr
-      throw copyErr or sassErr or csErr or pagesErr
+      exec 'sass --scss -t expanded --update -f scss:release/css', defer(sassErr, sassStdout, sassStderr)
+      exec 'coffee -c -o release/lib/ src/', defer(csErr, csStdout, csStderr)
+      compilePages defer(pagesErr)
+    handleProcessOutput 'copy', copyErr
+    handleProcessOutput 'sass', sassErr, sassStdout, sassStderr
+    handleProcessOutput 'coffee', csErr, csStdout, csStderr
+    handleProcessOutput 'compilePages', pagesErr
   catch e
     console.error e
   callback?()
