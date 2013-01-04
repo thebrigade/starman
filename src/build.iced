@@ -33,7 +33,7 @@ module.exports = (callback) ->
     console.error e
   callback?()
 
-makeReleaseDir = _.memoize (srcDir) ->
+makeReleaseDir = (srcDir) ->
   dirChunks = srcDir.split path.sep
   dirChunks[0] = 'release'
   releaseDir = dirChunks.join path.sep
