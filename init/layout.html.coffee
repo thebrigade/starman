@@ -18,8 +18,8 @@ html dir: 'ltr', lang: 'en', class: 'no-js', ->
       @body
     footer ->
       @footer
-    script src: '//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'
+    script src: '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'
     coffeescript ->
-      document.write('<script src="/lib/vendor/jquery-1.8.3.min.js"><\/script>') if not window.jQuery?
+      document.write('<script src="/lib/vendor/jquery-1.9.1.min.js"><\/script>') if not window.jQuery?
     script src: '/lib/plugins.js'
     script src: '/lib/scripts.js'
