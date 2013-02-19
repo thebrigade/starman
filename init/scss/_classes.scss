@@ -39,6 +39,14 @@
   text-align: right; 
 }
 
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
 .padding {
   padding: $padding 0;
 }
