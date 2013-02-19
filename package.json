@@ -3,6 +3,7 @@
   "version": "0.0.4",
   "description": "A simple utility to build static websites using coffeecup templates, coffeescript, and scss.",
   "main": "lib/cli.js",
+  "preferGlobal": true,
   "scripts": {
     "test": ""
   },
