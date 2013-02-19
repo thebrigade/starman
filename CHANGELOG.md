@@ -1,3 +1,16 @@
+starman@0.0.4 - 2-19-2013
+---------------------------
+- Init structure updates: new jquery, left/right float classes, chromeframe styles
+
+starman@0.0.3 - 1-25-2013
+---------------------------
+- Added much better init structure
+
+starman@0.0.2 - 1-03-2013
+---------------------------
+- Removed memoize from directory creation
+
+
 starman@0.0.1 - 1-03-2013
 ---------------------------
 - Initial release

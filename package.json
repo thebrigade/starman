@@ -1,6 +1,6 @@
 {
   "name": "starman",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A simple utility to build static websites using coffeecup templates, coffeescript, and scss.",
   "main": "lib/cli.js",
   "scripts": {
